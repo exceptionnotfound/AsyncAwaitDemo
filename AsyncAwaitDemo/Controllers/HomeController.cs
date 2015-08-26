@@ -11,6 +11,7 @@ namespace AsyncAwaitDemo.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             Stopwatch watch = new Stopwatch();
@@ -25,6 +26,7 @@ namespace AsyncAwaitDemo.Controllers
             return View();
         }
 
+        [HttpGet]
         public async Task<ActionResult> IndexAsync()
         {
             Stopwatch watch = new Stopwatch();
@@ -42,6 +44,7 @@ namespace AsyncAwaitDemo.Controllers
             return View("Index");
         }
 
+        [HttpGet]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -49,6 +52,7 @@ namespace AsyncAwaitDemo.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
